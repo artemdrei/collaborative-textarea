@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "no-loops"],
+  "extends": [
+    "airbnb-typescript"
+    // "airbnb/hooks"
+    // "plugin:@typescript-eslint/recommended",
+    // "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "rules": {
+    "no-console": 1,
+    "no-loops/no-loops": 2,
+    "no-throw-literal": 0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "@typescript-eslint/no-empty-interface": ["error", { "allowSingleExtends": true }],
+    "@typescript-eslint/no-throw-literal": ["error"]
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
