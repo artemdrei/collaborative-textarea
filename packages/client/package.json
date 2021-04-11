@@ -16,6 +16,12 @@
     "svg:optimize": "find ./src/assets/icons -type f -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
     "precommit": "lint-staged"
   },
+  "lint-staged": {
+    "src/**/*.js*": [
+      "yarn lint",
+      "git add"
+    ]
+  },
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js"
@@ -44,12 +50,6 @@
     "url": "https://github.com/artemdrei/Webpack/issues"
   },
   "homepage": "https://github.com/artemdrei/Webpack#readme",
-  "lint-staged": {
-    "src/**/*.js*": [
-      "npm lint",
-      "git add"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
