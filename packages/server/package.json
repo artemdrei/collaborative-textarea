@@ -1,6 +1,6 @@
 {
   "name": "@collaborative-textarea/server",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Drei Artem",
   "license": "MIT",
   "description": "",
@@ -9,13 +9,13 @@
     "start": "nodemon ./index.js"
   },
   "dependencies": {
-    "nodemon": "^2.0.4",
-    "socket.io": "3.0.4",
     "@teamwork/websocket-json-stream": "^2.0.0",
     "express": "^4.17.1",
+    "nodemon": "^2.0.4",
     "reconnecting-websocket": "^4.2.0",
     "sharedb": "^1.0.0-beta",
     "sharedb-string-binding": "^1.0.0",
+    "socket.io": "3.0.4",
     "ws": "^7.2.0"
   }
 }
