@@ -26,7 +26,7 @@ const startServer = () => {
 // Create initial document then fire callback
 function createDoc(callback) {
   const connection = DB.connect();
-  const doc = connection.get("examples", "textarea");
+  const doc = connection.get("doc", "textarea");
 
   doc.fetch(function (err) {
     if (err) throw err;

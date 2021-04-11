@@ -18,7 +18,7 @@ const Editor: React.FC = () => {
     socketLogger(socket);
 
     // Create local Doc instance mapped to 'examples' collection document with id 'textarea'
-    const doc = connection.get('examples', 'textarea');
+    const doc = connection.get('doc', 'textarea');
     doc.subscribe((err) => {
       if (err) throw new Error('error');
 
