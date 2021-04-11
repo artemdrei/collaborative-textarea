@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 
 import sharedb from 'sharedb/lib/client';
 import StringBinding from 'sharedb-string-binding';
-import socketLogger from './utils/socketLogger';
 import ReconnectingWebSocket from 'reconnecting-websocket';
 
 import Header from '@root/components/Header';
+import socketLogger from './utils/socketLogger';
 
 import s from './styles.scss';
 
