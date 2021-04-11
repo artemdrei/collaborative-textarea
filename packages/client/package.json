@@ -8,7 +8,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --watch",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "lint": "eslint '*/**/*.{js,ts,tsx}'",
+    "lint": "eslint --fix '*/**/*.{js,ts,tsx}'",
     "ts:watch": "tsc --skipLibCheck --allowJs --watch",
     "test": "jest",
     "test:watch": "jest --watch --verbose false",
