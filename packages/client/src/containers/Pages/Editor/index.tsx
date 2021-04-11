@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import sharedb from 'sharedb/lib/client';
 import StringBinding from 'sharedb-string-binding';
@@ -13,16 +13,17 @@ const socket = new ReconnectingWebSocket('ws://localhost:5000');
 const connection = new sharedb.Connection(socket);
 
 const Editor: React.FC = () => {
+  const intervalRef = useRef(null);
+
   useEffect(() => {
-    const element = document.getElementById('#textarea');
+    intervalRef.current = document.getElementById('#textarea');
     socketLogger(socket);
 
-    // Create local Doc instance mapped to 'examples' collection document with id 'textarea'
     const doc = connection.get('doc', 'textarea');
     doc.subscribe((err) => {
-      if (err) throw new Error('error');
+      if (err) throw new Error(err.message);
 
-      const binding = new StringBinding(element, doc, ['content']);
+      const binding = new StringBinding(intervalRef.current, doc, ['content']);
       binding.setup();
     });
 
