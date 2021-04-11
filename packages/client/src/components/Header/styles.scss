@@ -1,7 +1,4 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   height: 60px;
   padding: 4px 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -10,4 +7,13 @@
 .title {
   font-size: 20px;
   margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto;
 }

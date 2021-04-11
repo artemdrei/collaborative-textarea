@@ -6,7 +6,9 @@ import s from './styles.scss';
 
 const Header = () => (
   <div className={s.header}>
-    <h1 className={s.title}>{labels.pages.editor.title}</h1>
+    <div className={s.container}>
+      <h1 className={s.title}>{labels.pages.editor.title}</h1>
+    </div>
   </div>
 );
 
