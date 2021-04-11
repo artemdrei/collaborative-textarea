@@ -1,21 +1,22 @@
 {
   "name": "collaborative-textarea",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "index.js",
   "author": "Artem Drei",
   "license": "MIT",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "lint": "lerna run lint --stream",
-    "start": "lerna run start --stream"
+    "start": "lerna run start --stream",
+    "new:version": "lerna version --no-push"
   },
   "devDependencies": {
     "husky": "^3.0.4",
     "lerna": "^3.16.4"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "npx lerna run --concurrency 1 --stream precommit"
