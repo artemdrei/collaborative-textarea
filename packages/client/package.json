@@ -43,12 +43,8 @@
   "browserslist": "> 1%, not dead",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artemdrei/Webpack.git"
+    "url": ""
   },
-  "bugs": {
-    "url": "https://github.com/artemdrei/Webpack/issues"
-  },
-  "homepage": "https://github.com/artemdrei/Webpack#readme",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.12.1",

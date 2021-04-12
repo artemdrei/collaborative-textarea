@@ -30,7 +30,7 @@ const createDoc = (callback: () => void) => {
   const connection = DB.connect();
   const doc = connection.get('doc', 'textarea');
 
-  doc.fetch(function (err: Error) {
+  doc.fetch((err: Error) => {
     if (err) throw err;
     if (doc.type === null) {
       doc.create({ content: '' }, callback);

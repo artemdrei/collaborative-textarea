@@ -1,0 +1,10 @@
+{
+  "extends": ["airbnb-typescript"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true
+  }
+}

@@ -11,8 +11,8 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*/**/*.{js,ts,tsx}": [
-      "npm run lint",
+    "*.{js,ts}": [
+      "yarn lint",
       "git add"
     ]
   },
