@@ -1,7 +1,8 @@
 const labels = {
   pages: {
     editor: {
-      title: 'Form for collaboration',
+      title: 'Textarea for collaboration',
+      textareaPlaceholder: 'Start typing...',
     },
   },
 };

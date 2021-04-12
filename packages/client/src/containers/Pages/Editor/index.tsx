@@ -5,6 +5,7 @@ import StringBinding from 'sharedb-string-binding';
 import ReconnectingWebSocket from 'reconnecting-websocket';
 
 import Header from '@root/components/Header';
+import labels from '@root/i18n';
 import socketLogger from './utils/socketLogger';
 
 import s from './styles.scss';
@@ -36,7 +37,7 @@ const Editor: React.FC = () => {
     <div>
       <Header />
       <div className={s.content}>
-        <textarea className={s.textarea} id="#textarea" placeholder="Write message..." />
+        <textarea className={s.textarea} id="#textarea" placeholder={labels.pages.editor.textareaPlaceholder} />
       </div>
     </div>
   );
