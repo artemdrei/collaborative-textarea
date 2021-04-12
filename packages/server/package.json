@@ -7,7 +7,14 @@
   "main": "index.ts",
   "scripts": {
     "start": "nodemon ./index.ts",
-    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*/**/*.{js,ts,tsx}": [
+      "npm run lint",
+      "git add"
+    ]
   },
   "dependencies": {
     "@teamwork/websocket-json-stream": "^2.0.0",
@@ -26,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-plugin-import": "^2.22.1",
+    "lint-staged": "^10.5.4",
     "typescript": "^4.2.4"
   }
 }
