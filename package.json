@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "lerna run lint --stream",
     "start": "lerna run start --stream",
-    "update:version": "lerna version --no-push"
+    "update": "lerna version --no-push"
   },
   "devDependencies": {
     "husky": "^3.0.4",
