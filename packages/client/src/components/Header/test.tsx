@@ -7,6 +7,6 @@ describe('Header', () => {
   it('should take a snapshot', () => {
     const { getByText } = render(<Header />);
 
-    expect(getByText('Form for collaboration')).toMatchSnapshot();
+    expect(getByText('Textarea for collaboration')).toMatchSnapshot();
   });
 });
