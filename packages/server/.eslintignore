@@ -1,0 +1,4 @@
+node_modules
+dist
+global.d.ts
+__mocks__

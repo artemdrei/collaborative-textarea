@@ -2,7 +2,6 @@
   "name": "collaborative-textarea",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Artem Drei",
   "license": "MIT",
   "private": true,
   "workspaces": [

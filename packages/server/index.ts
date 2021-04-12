@@ -1,20 +1,22 @@
-import http from "http";
-import WebSocket from "ws";
-const express = require("express");
-const ShareDB = require("sharedb");
-const WebSocketJSONStream = require("@teamwork/websocket-json-stream");
+import WebSocket from 'ws';
+
+const http = require('http');
+const express = require('express');
+const ShareDB = require('sharedb');
+const WebSocketJSONStream = require('@teamwork/websocket-json-stream');
 
 const PORT = 5000;
+const DB = new ShareDB();
 
 const startServer = () => {
   // Create a web server to serve files and listen to WebSocket connections
   const app = express();
-  app.use(express.static("static"));
+  app.use(express.static('static'));
   const server = http.createServer(app);
 
   // Connect any incoming WebSocket connection to ShareDB
   const wss = new WebSocket.Server({ server });
-  wss.on("connection", (ws) => {
+  wss.on('connection', (ws) => {
     const stream = new WebSocketJSONStream(ws);
     DB.listen(stream);
   });
@@ -24,19 +26,18 @@ const startServer = () => {
 };
 
 // Create initial document then fire callback
-function createDoc(callback: () => void) {
+const createDoc = (callback: () => void) => {
   const connection = DB.connect();
-  const doc = connection.get("doc", "textarea");
+  const doc = connection.get('doc', 'textarea');
 
   doc.fetch(function (err: Error) {
     if (err) throw err;
     if (doc.type === null) {
-      doc.create({ content: "" }, callback);
+      doc.create({ content: '' }, callback);
       return;
     }
     callback();
   });
-}
+};
 
-const DB = new ShareDB();
 createDoc(startServer);
