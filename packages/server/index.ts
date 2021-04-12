@@ -1,7 +1,7 @@
-const http = require("http");
+import http from "http";
+import WebSocket from "ws";
 const express = require("express");
 const ShareDB = require("sharedb");
-const WebSocket = require("ws");
 const WebSocketJSONStream = require("@teamwork/websocket-json-stream");
 
 const PORT = 5000;
@@ -24,11 +24,11 @@ const startServer = () => {
 };
 
 // Create initial document then fire callback
-function createDoc(callback) {
+function createDoc(callback: () => void) {
   const connection = DB.connect();
   const doc = connection.get("doc", "textarea");
 
-  doc.fetch(function (err) {
+  doc.fetch(function (err: Error) {
     if (err) throw err;
     if (doc.type === null) {
       doc.create({ content: "" }, callback);

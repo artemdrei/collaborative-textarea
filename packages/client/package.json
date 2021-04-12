@@ -1,7 +1,6 @@
 {
   "name": "@collaborative-textarea/client",
   "version": "1.0.0",
-  "author": "Drei Artem",
   "license": "MIT",
   "description": "",
   "main": "index.js",
