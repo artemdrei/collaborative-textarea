@@ -1,5 +1,3 @@
 node_modules
-packages/client/package-lock.json
-packages/server/package-lock.json
 lerna-debug.log
 .DS_Store
