@@ -15,6 +15,6 @@ backend runs on https://localhost:5000
 frontend runs on https://localhost:5100
 ```
 
-### Runs lint command in both server and client package.
+#### Runs lint command in both server and client package.
 
 `yarn lint`
