@@ -17,19 +17,16 @@
   },
   "lint-staged": {
     "*/**/*.{js,ts,tsx}": [
-      "npm run lint",
+      "yarn lint",
       "git add"
     ]
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.js"
+      "<rootDir>/src/setupTests.ts"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
-    ],
-    "setupFiles": [
-      "<rootDir>/node_modules/regenerator-runtime/runtime"
     ],
     "moduleNameMapper": {
       "\\.(svg)$": "<rootDir>/__mocks__/svgMock.js",
@@ -96,6 +93,7 @@
     "npm": "^6.14.9",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "redux-mock-store": "^1.5.4",
+    "regenerator-runtime": "^0.13.7",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "svg-react-loader": "^0.4.6",
@@ -116,6 +114,7 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "reconnecting-websocket": "^4.2.0",
+    "regenerator-runtime": "^0.13.7",
     "sharedb": "^1.0.0-beta",
     "sharedb-string-binding": "^1.0.0",
     "socket.io-client": "^4.0.0",
